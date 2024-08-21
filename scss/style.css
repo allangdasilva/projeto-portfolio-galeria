@@ -136,6 +136,14 @@
      object-fit: cover;
 }
 
-.footer-container {
+.footer {
   margin-left: 280px;
+  padding-block: 10px 25px;
+}
+.footer-copy {
+  text-align: center;
+  color: #666666;
+}
+.footer-copy p {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */

@@ -162,6 +162,16 @@
     }
 }
 
-.footer-container {
+.footer {
     margin-left: 280px;
+    padding-block: 10px 25px;
+
+    &-copy {
+        text-align: center;
+        color: $primary-color;
+
+        p {
+            font-size: 14px;
+        }
+    }
 }
