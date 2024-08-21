@@ -49,6 +49,10 @@
   font-size: 14px;
   text-decoration: none;
   color: #666666;
+  transition-duration: 0.3s;
+}
+.header-nav a:hover {
+  color: #222222;
 }
 
 .main {
@@ -134,11 +138,18 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition-duration: 0.4s;
+}
+.main-images img:hover {
+  cursor: pointer;
+  filter: brightness(50%);
+  transform: scale(1.05);
 }
 
 .footer {
   margin-left: 280px;
   padding-block: 10px 25px;
+  background-color: #fff;
 }
 .footer-copy {
   text-align: center;

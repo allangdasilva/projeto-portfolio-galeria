@@ -52,10 +52,16 @@
                 font-size: 16px;
             }
         }
+
         a {
             font-size: 14px;
             text-decoration: none;
             color: $primary-color;
+            transition-duration: 0.3s;
+
+            &:hover {
+                color: $secondary-color;
+            }
         }
     }
 }
@@ -158,6 +164,13 @@
             width: 100%;
 
             object-fit: cover;
+            
+            transition-duration: 0.4s;
+            &:hover {
+                cursor: pointer;
+                filter: brightness(50%);
+                transform: scale(1.05);
+            }
         }
     }
 }
@@ -165,6 +178,8 @@
 .footer {
     margin-left: 280px;
     padding-block: 10px 25px;
+
+    background-color: $bg-color;
 
     &-copy {
         text-align: center;
