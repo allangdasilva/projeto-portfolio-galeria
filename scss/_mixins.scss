@@ -1,0 +1,8 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin left-relative {
+    position: relative;
+    margin-left: 280px;
+}
