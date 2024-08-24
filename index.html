@@ -9,14 +9,14 @@
     <link href="https://db.onlinewebfonts.com/c/bd6213fa49bedc8cb050c63f14360efa?family=CircularAir-Book"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/c0a77e3bb7.js" crossorigin="anonymous"></script>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <!-- Progressive image -->
+    <!-- Progressive-image -->
     <link href="//unpkg.com/progressive-image/dist/index.css" rel="stylesheet" type="text/css">
 
     <!-- Style -->
@@ -24,11 +24,14 @@
 </head>
 
 <body>
-
-    <header class="header">
+    <!-- Header -->
+    <header class="header" id="header">
         <div class="header-logo">
             <a href="#"><img src="images/logo.png" alt="logo"></a>
         </div>
+
+        <div class="header-menu-icon" id="menu"><!-- Menu --></div>
+
         <nav class="header-nav">
             <ul class="header-nav-ul-about">
                 <li><a href="#">Home</a></li>
@@ -46,6 +49,19 @@
         </nav>
     </header>
 
+    <!-- Submenu -->
+    <div class="submenu" id="submenu">
+        <nav class="submenu-nav">
+            <ul class="submenu-nav-ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Jornal</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main -->
     <div class="main">
         <section class="main-images" id="app">
             <div class="main-images-01 progressive">
@@ -205,13 +221,14 @@
         </section>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-copy">
             <p>&copy; Todos direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Progressive image -->
+    <!-- Progressive-image -->
     <script src="https://unpkg.com/progressive-image/dist/index.js"></script>
     <script>
         (function () {
@@ -222,6 +239,23 @@
                     scale: true
                 }).fire()
             })()
+    </script>
+
+    <!-- jQuery -->
+    <script>
+        $('#menu').click(
+            function(){
+                    if($('#submenu').css('top') == '-80px'){
+                        $('#submenu').animate({top:'60px'},{duration:700})
+                        $('#menu').addClass('active')
+                        $('#header').css('box-shadow','0px 2px 20px 0px #22222210')
+                    }else{
+                        $('#submenu').animate({top:'-80px'},{duration:700})
+                        $('#menu').removeClass('active')
+                        $('#header').css('box-shadow','none')
+                    }
+            }
+        )
     </script>
 </body>
 

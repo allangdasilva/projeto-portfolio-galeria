@@ -9,6 +9,7 @@
     list-style: none;
 }
 
+// ------------------Header------------------
 .header {
     position: fixed;
 
@@ -22,6 +23,11 @@
     box-shadow: 0.1px 0px 0px $primary-color;
     background-color: $bg-color;
 
+    // ------------------RESPONSIVE------------------
+    @include tablet {
+        @include menu-responsive;
+    }
+
     &-logo {
         height: 30px;
         width: 100%;
@@ -31,6 +37,18 @@
         img {
             height: 100%
         }
+        // ------------------RESPONSIVE------------------
+        @include tablet {
+            margin-bottom: 0;
+        }
+
+    }
+    &-menu-icon {
+        display: none;
+        // ------------------RESPONSIVE------------------
+        @include tablet {
+            @include menu-icon;
+        }
     }
     &-nav {
         @include flex-column;
@@ -38,7 +56,7 @@
 
         height: 100%;
         width: 100%;
-        
+
         &-ul-about {
             @include flex-column;
             gap: 10px;
@@ -66,8 +84,67 @@
                 color: $secondary-color;
             }
         }
+        // ------------------RESPONSIVE------------------
+        @include tablet{
+            display: none;
+        }
     }
 }
+
+
+// ------------------Menu-active------------------
+header .header-menu-icon.active{
+    border-top: transparent;
+    &::after{
+        transform: rotate(135deg);
+        bottom: 9px;
+    }
+    &::before{
+        transform: rotate(-135deg);
+        bottom: 1px;
+    }
+}
+// ------------------Submenu------------------
+.submenu {
+    display: none;
+    // ------------------RESPONSIVE------------------
+    @include tablet {
+        position: fixed;
+        top: -80px;
+        left: 0;
+
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        z-index: 1;
+        background-color: $bg-color;
+
+        transition-timing-function: ease-in;
+
+        &-nav {
+            width: 100%;
+
+            &-ul {
+                padding-block: 10px;
+
+                a {
+                    display: block;
+                    padding: 6px 20px;
+
+                    font-size: 14px;
+                    text-decoration: none;
+
+                    color: $secondary-color
+                }
+            }
+            
+        }
+    }
+}
+
+
+// ------------------Main------------------
 .main {
     margin-left: $header-width;
     background-color: $bg-color;
@@ -175,11 +252,59 @@
                 transform: scale(1.05);
             }
         }
+        // ------------------MOBILE------------------
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            'img-01'
+            'img-02'
+            'img-02'
+            'img-03'
+            'img-03'
+            'img-04'
+            'img-05'
+            'img-06'
+            'img-07'
+            'img-08'
+            'img-08'
+            'img-09'
+            'img-09'
+            'img-10'
+            'img-11'
+            'img-12'
+            'img-13'
+            'img-14'
+            'img-14'
+            'img-15'
+            'img-15'
+            'img-16'
+            'img-16'
+            'img-17'
+            'img-18'
+            'img-19'
+            'img-20'
+            'img-21'
+            'img-21'
+            'img-22'
+            'img-22'
+            ;
+            gap: 10px;
+            padding: 10px;
+        }
     }
+
+    // ------------------RESPONSIVE------------------
+    @include tablet {
+        padding-top: 60px;
+        margin-left: 0;
+    }
+
 }
 
+
+// ------------------Footer------------------
 .footer {
-    margin-left: 280px;
+    margin-left: $header-width;
     padding-block: 10px 25px;
 
     background-color: $bg-color;
@@ -191,5 +316,9 @@
         p {
             font-size: 14px;
         }
+    }
+    // ------------------RESPONSIVE------------------
+    @include tablet {
+        margin-left: 0;
     }
 }
