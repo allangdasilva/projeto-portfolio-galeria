@@ -16,14 +16,11 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <!-- Progressive-image -->
-    <link href="//unpkg.com/progressive-image/dist/index.css" rel="stylesheet" type="text/css">
-
     <!-- Style -->
     <link rel="stylesheet" href="scss/style.css">
 </head>
 
-<body>
+<body>   
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-logo">
@@ -61,162 +58,200 @@
         </nav>
     </div>
 
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-options">
+                <div class="close-icon" id="close"><!-- Close --></div>
+        </div>
+        <div class="modal-content">
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="image"><img src="" alt=""></div>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="modal-slide">
+            <!-- Images -->
+        </div>
+    </div>
+
     <!-- Main -->
     <div class="main">
-        <section class="main-images" id="app">
-            <div class="main-images-01 progressive">
+        <section class="main-images">
+            <div class="main-images-01">
                 <img 
-                    class="lazy"
-                    src="images/violin-thumb-01.jpg"
-                    data-src="images/violin-01.jpg" 
-                    alt="Foto de um amplificador">
+                    loading="lazy"
+                    src="images/violin-01.jpg" 
+                    alt="Foto de um amplificador"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/violin-01.jpg')"
+                    id="img01">
             </div>
-            <div class="main-images-02 progressive">
+            <div class="main-images-02">
                 <img 
-                    class="lazy"
-                    src="images/violin-thumb-02.jpg"
-                    data-src="images/violin-02.jpg" 
-                    alt="Foto de um violino">
+                    loading="lazy"
+                    src="images/violin-02.jpg" 
+                    alt="Foto de um violino"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/violin-02.jpg')">
             </div>
-            <div class="main-images-03 progressive">
+            <div class="main-images-03">
                 <img 
-                    class="lazy"
-                    src="images/violin-thumb-03.jpg"
-                    data-src="images/violin-03.jpg" 
-                    alt="Foto de uma mulher tocando um violino">
+                    loading="lazy"
+                    src="images/violin-03.jpg" 
+                    alt="Foto de uma mulher tocando um violino"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/violin-03.jpg')">
             </div>
-            <div class="main-images-04 progressive">
+            <div class="main-images-04">
                 <img 
-                    class="lazy"
-                    src="images/violin-thumb-04.jpg"
-                    data-src="images/violin-04.jpg" 
-                    alt="Foto de um homem tocando um violino">
+                    loading="lazy"
+                    src="images/violin-04.jpg" 
+                    alt="Foto de um homem tocando um violino"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/violin-04.jpg')">
             </div>
-            <div class="main-images-05 progressive">
+            <div class="main-images-05">
                 <img 
-                    class="lazy"
-                    src="images/violin-thumb-05.jpg"
-                    data-src="images/violin-05.jpg" 
-                    alt="Foto de um led vermelho escrito 'relax'">
+                    loading="lazy"
+                    src="images/violin-05.jpg" 
+                    alt="Foto de um led vermelho escrito 'relax'"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/violin-05.jpg')">
             </div>
-            <div class="main-images-06 progressive">
+            <div class="main-images-06">
                 <img 
-                    class="lazy"
-                    src="images/violin-thumb-06.jpg"
-                    data-src="images/violin-06.jpg" 
-                    alt="Foto de um led vermelho escrito 'Be Brilliant'">
+                    loading="lazy"
+                    src="images/violin-06.jpg" 
+                    alt="Foto de um led vermelho escrito 'Be Brilliant'"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/violin-06.jpg')">
             </div>
-            <div class="main-images-07 progressive">
+            <div class="main-images-07">
                 <img 
-                    class="lazy"
-                    src="images/photograph-thumb-03.jpg"
-                    data-src="images/photograph-03.jpg" 
-                    alt="Foto de duas câmeras fotográficas">
+                    loading="lazy"
+                    src="images/photograph-03.jpg" 
+                    alt="Foto de duas câmeras fotográficas"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/photograph-03.jpg')">
             </div>
-            <div class="main-images-08 progressive">
+            <div class="main-images-08">
                 <img 
-                    class="lazy"
-                    src="images/photograph-thumb-01.jpg"
-                    data-src="images/photograph-01.jpg" 
-                    alt="Foto de uma câmera fotográfica">
+                    loading="lazy"
+                    src="images/photograph-01.jpg" 
+                    alt="Foto de uma câmera fotográfica"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/photograph-01.jpg')">
             </div>
-            <div class="main-images-09 progressive">
+            <div class="main-images-09">
                 <img 
-                    class="lazy"
-                    src="images/photograph-thumb-02.jpg"
-                    data-src="images/photograph-02.jpg" 
-                    alt="Foto de uma câmera polaroid e seu álbum">
+                    loading="lazy"
+                    src="images/photograph-02.jpg" 
+                    alt="Foto de uma câmera polaroid e seu álbum"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/photograph-02.jpg')">
             </div>
-            <div class="main-images-10 progressive">
+            <div class="main-images-10">
                 <img 
-                    class="lazy"
-                    src="images/photograph-thumb-04.jpg"
-                    data-src="images/photograph-04.jpg" 
-                    alt="Foto de uma câmera fotográfica e um livro">
+                    loading="lazy"
+                    src="images/photograph-04.jpg" 
+                    alt="Foto de uma câmera fotográfica e um livro"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/photograph-04.jpg')">
             </div>
-            <div class="main-images-11 progressive">
+            <div class="main-images-11">
                 <img 
-                    class="lazy"
-                    src="images/photograph-thumb-05.jpg"
-                    data-src="images/photograph-05.jpg" 
-                    alt="Foto de uma coleção de fotos">
+                    loading="lazy"
+                    src="images/photograph-05.jpg" 
+                    alt="Foto de uma coleção de fotos"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/photograph-05.jpg')">
             </div>
-            <div class="main-images-12 progressive">
+            <div class="main-images-12">
                 <img 
-                    class="lazy"
-                    src="images/photograph-thumb-06.jpg"
-                    data-src="images/photograph-06.jpg" 
-                    alt="Foto de uma coleção de fotos">
+                    loading="lazy"
+                    src="images/photograph-06.jpg" 
+                    alt="Foto de uma coleção de fotos"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/photograph-06.jpg')">
             </div>
-            <div class="main-images-13 progressive">
+            <div class="main-images-13">
                 <img 
-                    class="lazy"
-                    src="images/vinyl-thumb-02.jpg"
-                    data-src="images/vinyl-02.jpg" 
-                    alt="Foto de uma loja de disco de vinil">
+                    loading="lazy"
+                    src="images/vinyl-02.jpg" 
+                    alt="Foto de uma loja de disco de vinil"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/vinyl-02.jpg')">
             </div>
-            <div class="main-images-14 progressive">
+            <div class="main-images-14">
                 <img 
-                    class="lazy"
-                    src="images/vinyl-thumb-01.jpg"
-                    data-src="images/vinyl-01.jpg" 
-                    alt="Foto de uma coleção de disco de vinil">
+                    loading="lazy"
+                    src="images/vinyl-01.jpg" 
+                    alt="Foto de uma coleção de disco de vinil"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/vinyl-01.jpg')">
             </div>
-            <div class="main-images-15 progressive">
+            <div class="main-images-15">
                 <img 
-                    class="lazy"
-                    src="images/vinyl-thumb-08.jpg"
-                    data-src="images/vinyl-08.jpg" 
-                    alt="Foto de uma mulher com um disco de vinil">
+                    loading="lazy"
+                    src="images/vinyl-08.jpg" 
+                    alt="Foto de uma mulher com um disco de vinil"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/vinyl-08.jpg')">
             </div>
-            <div class="main-images-16 progressive">
+            <div class="main-images-16">
                 <img 
-                    class="lazy"
-                    src="images/vinyl-thumb-04.jpg"
-                    data-src="images/vinyl-04.jpg" 
-                    alt="Foto de uma coleção de disco de vinil">
+                    loading="lazy"
+                    src="images/vinyl-04.jpg" 
+                    alt="Foto de uma coleção de disco de vinil"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/vinyl-04.jpg')">
             </div>
-            <div class="main-images-17 progressive">
+            <div class="main-images-17">
                 <img 
-                    class="lazy"
-                    src="images/vinyl-thumb-03.jpg"
-                    data-src="images/vinyl-03.jpg" 
-                    alt="Foto de uma coleção de disco de vinil">
+                    loading="lazy"
+                    src="images/vinyl-03.jpg" 
+                    alt="Foto de uma coleção de disco de vinil"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/vinyl-03.jpg')">
             </div>
-            <div class="main-images-18 progressive">
+            <div class="main-images-18">
                 <img 
-                    class="lazy"
-                    src="images/vinyl-thumb-07.jpg"
-                    data-src="images/vinyl-07.jpg" 
-                    alt="Foto de uma mulher deitada com um disco de vinil">
+                    loading="lazy"
+                    src="images/vinyl-07.jpg" 
+                    alt="Foto de uma mulher deitada com um disco de vinil"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/vinyl-07.jpg')">
             </div>
-            <div class="main-images-19 progressive">
+            <div class="main-images-19">
                 <img 
-                    class="lazy"
-                    src="images/wedding-thumb-02.jpg"
-                    data-src="images/wedding-02.jpg" 
-                    alt="Foto de duas alianças">
+                    loading="lazy"
+                    src="images/wedding-02.jpg" 
+                    alt="Foto de duas alianças"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/wedding-02.jpg')">
             </div>
-            <div class="main-images-20 progressive">
+            <div class="main-images-20">
                 <img 
-                    class="lazy"
-                    src="images/wedding-thumb-01.jpg"
-                    data-src="images/wedding-01.jpg" 
-                    alt="Foto de flores de casamento">
+                    loading="lazy"
+                    src="images/wedding-01.jpg" 
+                    alt="Foto de flores de casamento"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/wedding-01.jpg')">
             </div>
-            <div class="main-images-21 progressive">
+            <div class="main-images-21">
                 <img 
-                    class="lazy"
-                    src="images/wedding-thumb-03.jpg"
-                    data-src="images/wedding-03.jpg" 
-                    alt="Foto de casamento">
+                    loading="lazy"
+                    src="images/wedding-03.jpg" 
+                    alt="Foto de casamento"
+                    height="600px" width="1fr"
+                    onclick="openImage('images/wedding-03.jpg')">
             </div>
-            <div class="main-images-22 progressive">
+            <div class="main-images-22">
                 <img 
-                    class="lazy"
-                    src="images/wedding-thumb-04.jpg"
-                    data-src="images/wedding-04.jpg" 
-                    alt="Foto de casamento">
+                    loading="lazy"
+                    src="images/wedding-04.jpg" 
+                    alt="Foto de casamento"
+                    height="300px" width="1fr"
+                    onclick="openImage('images/wedding-04.jpg')">
             </div>
         </section>
     </div>
@@ -228,21 +263,14 @@
         </div>
     </footer>
 
-    <!-- Progressive-image -->
-    <script src="https://unpkg.com/progressive-image/dist/index.js"></script>
-    <script>
-        (function () {
-                new Progressive({
-                    el: '#app',
-                    lazyClass: 'lazy',
-                    removePreview: true,
-                    scale: true
-                }).fire()
-            })()
-    </script>
-
     <!-- jQuery -->
     <script>
+        function openImage(valueSrc) {
+            $('.modal-content img').attr('src', valueSrc)
+            $('.modal').css('opacity','1')
+            $('.modal').css('pointer-events','all')
+            $('#close').addClass('active')
+        }
         $(document).ready(
             function () {
                 $('#menu').click(
@@ -256,6 +284,13 @@
                             $('#menu').removeClass('active')
                             $('#header').css('box-shadow', 'none')
                         }
+                    }
+                )
+                $('#close').click(
+                    function () {
+                        $('.modal').css('opacity','0')
+                        $('.modal').css('pointer-events','none')
+                        $(this).removeClass('active')
                     }
                 )
             }
