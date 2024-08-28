@@ -169,22 +169,38 @@ header .header-menu-icon.active::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5019607843);
   z-index: 999;
   opacity: 0;
   pointer-events: none;
   transition-duration: 0.2s;
 }
+.modal-container {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+@media screen and (max-width: 990px) {
+  .modal-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+}
 .modal-options {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10%;
+  flex-direction: column;
+  height: 100vh;
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #fff;
+  padding-block: 20px;
+}
+@media screen and (max-width: 990px) {
+  .modal-options {
+    height: 10%;
+    padding-block: 0px;
+  }
 }
 .modal-options .close-icon {
   position: absolute;
@@ -198,6 +214,8 @@ header .header-menu-icon.active::before {
   z-index: 100;
   transition-duration: 0.3s;
   border-top: 2px solid transparent;
+  top: 25px;
+  right: 2.5px;
   transition-duration: 0.1s;
 }
 .modal-options .close-icon::after, .modal-options .close-icon::before {
@@ -210,6 +228,12 @@ header .header-menu-icon.active::before {
   background-color: #222222;
   transition-duration: 0.4s;
 }
+@media screen and (max-width: 990px) {
+  .modal-options .close-icon {
+    top: 21px;
+    right: 20px;
+  }
+}
 .modal-options .close-icon::after {
   transform: rotate(0deg);
   bottom: 0px;
@@ -219,36 +243,25 @@ header .header-menu-icon.active::before {
   bottom: 0px;
 }
 .modal-content {
-  display: grid;
-  grid-template-columns: 20px 1fr 20px;
-  grid-auto-rows: 100%;
-  justify-items: center;
-  align-items: center;
-  gap: 5px;
-  height: 75%;
+  height: 100vh;
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #fff;
+  padding: 20px;
+}
+@media screen and (max-width: 990px) {
+  .modal-content {
+    height: 90%;
+  }
 }
 .modal-content .image {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 .modal-content img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  padding-block: 20px;
-}
-.modal-content i {
-  padding-inline: 15px;
-}
-.modal-slide {
-  height: 15%;
-  width: 100%;
-  background-color: #fff;
 }
 
 .main {

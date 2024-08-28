@@ -60,16 +60,13 @@
 
     <!-- Modal -->
     <div class="modal">
-        <div class="modal-options">
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="image"><img src="" alt=""></div>
+            </div>
+            <div class="modal-options">
                 <div class="close-icon" id="close"><!-- Close --></div>
-        </div>
-        <div class="modal-content">
-            <i class="fa-solid fa-arrow-left"></i>
-            <div class="image"><img src="" alt=""></div>
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="modal-slide">
-            <!-- Images -->
+            </div>
         </div>
     </div>
 
@@ -79,35 +76,34 @@
             <div class="main-images-01">
                 <img 
                     loading="lazy"
-                    src="images/violin-01.jpg" 
-                    alt="Foto de um amplificador"
+                    src="images/tech-05.jpg" 
+                    alt="Foto de pessoas brincando com poeira colorida"
                     height="300px" width="1fr"
-                    onclick="openImage('images/violin-01.jpg')"
-                    id="img01">
+                    onclick="openImage('images/tech-05.jpg')">
             </div>
             <div class="main-images-02">
                 <img 
                     loading="lazy"
-                    src="images/violin-02.jpg" 
-                    alt="Foto de um violino"
+                    src="images/tech-02.jpg" 
+                    alt="Foto de um homem sobre um reflexo vermelho"
                     height="600px" width="1fr"
-                    onclick="openImage('images/violin-02.jpg')">
+                    onclick="openImage('images/tech-02.jpg')">
             </div>
             <div class="main-images-03">
                 <img 
                     loading="lazy"
-                    src="images/violin-03.jpg" 
-                    alt="Foto de uma mulher tocando um violino"
+                    src="images/tech-03.jpg" 
+                    alt="Foto de uma poeira roxa"
                     height="600px" width="1fr"
-                    onclick="openImage('images/violin-03.jpg')">
+                    onclick="openImage('images/tech-03.jpg')">
             </div>
             <div class="main-images-04">
                 <img 
                     loading="lazy"
-                    src="images/violin-04.jpg" 
-                    alt="Foto de um homem tocando um violino"
+                    src="images/tech-04.jpg" 
+                    alt="Foto de um teclado"
                     height="300px" width="1fr"
-                    onclick="openImage('images/violin-04.jpg')">
+                    onclick="openImage('images/tech-04.jpg')">
             </div>
             <div class="main-images-05">
                 <img 
@@ -270,6 +266,8 @@
             $('.modal').css('opacity','1')
             $('.modal').css('pointer-events','all')
             $('#close').addClass('active')
+            $('#menu').css('display','none')
+            $('div.image img').delay(50).animate({scale:'1'},{duration:200})
         }
         $(document).ready(
             function () {
@@ -277,11 +275,11 @@
                     function () {
                         if ($('#submenu').css('top') == '-80px') {
                             $('#submenu').animate({ top: '60px' }, { duration: 700 })
-                            $('#menu').addClass('active')
+                            $(this).addClass('active')
                             $('#header').css('box-shadow', '0px 2px 20px 0px #22222210')
                         } else {
                             $('#submenu').animate({ top: '-80px' }, { duration: 700 })
-                            $('#menu').removeClass('active')
+                            $(this).removeClass('active')
                             $('#header').css('box-shadow', 'none')
                         }
                     }
@@ -291,6 +289,8 @@
                         $('.modal').css('opacity','0')
                         $('.modal').css('pointer-events','none')
                         $(this).removeClass('active')
+                        $('#menu').css('display','block')
+                        $('div.image img').animate({scale:'0'},{duration:200})
                     }
                 )
             }
