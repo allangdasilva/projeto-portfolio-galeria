@@ -1,14 +1,113 @@
+@use 'variables.scss' as *;
+@use 'mixins.scss' as *;
+
 .main {
     &-about {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 630px 700px 770px;
+
+        // ------------------RESPONSIVE------------------
+        @include mobile {
+            grid-template-rows: 630px 400px 1fr;
+        }
+        @include mobile-s {
+            grid-template-rows: 630px 300px 1fr;
+        }
+
         &-head {
-            background-color: red;
+            @include flex-center;
+            flex-direction: column;
+
+            padding: 15px;
+            text-align: center;
+            background-color: $bg-color;
+
             h2 {
-                font-weight: 400;
+                font-size: 60px;
                 font-family: "Merriweather", serif;
+                font-weight: 400;
+
+                margin-bottom: 30px;
+
+                // ------------------RESPONSIVE------------------
+                @include tablet {
+                    font-size: 55px;
+                }
+                @include mobile {
+                    font-size: 45px;
+                }
             }
+            span {
+                font-size: 14px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+        }
+        &-photo {
+            padding: 15px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                // ------------------RESPONSIVE------------------
+                @include mobile-s {
+                    object-fit: contain
+                }
+            }
+        }
+        &-text {
+            @include flex-center;
+            flex-direction: column;
+
+            padding: 15px;
+
+            h2 {
+                text-align: center;
+                font-weight: 500;
+                font-size: 40px;
+            }
+            p {
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                font-size: 16px;
+
+                line-height: 30px;
+                max-width: 710px;
+
+                color: $tertiary-color;
+            }
+        }
+        &-button {
+            @include flex-center;
+            padding: 15px;
+
+            .button {
+                font-size: 15px;
+                font-weight: 500;
+
+                border: none;
+                padding: 12px 32px;
+                cursor: pointer;
+
+                color: $bg-color;
+                background-color: $button-color;
+
+                transition-duration: 0.4s;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0px 3px 10px 0px #22222244;
+                }
+            }
+        }
+        hr {
+            margin-bottom: 20px;
+            margin-inline: auto;
+            opacity: 0.1;
+            width: 90%;
+            border-color: $tertiary-color;
         }
     }
 }

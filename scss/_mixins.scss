@@ -77,3 +77,8 @@
         @content;
     }
 }
+@mixin mobile-s {
+    @media screen and (max-width:590px){
+        @content;
+    }
+}
