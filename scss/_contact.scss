@@ -1,0 +1,63 @@
+@use 'variables.scss' as *;
+@use 'mixins.scss' as *;
+
+.main {
+    &-form-content {
+        @include flex-center;
+        flex-direction: column;
+        
+        height: 100%;
+        padding: 15px;
+
+        h2 {
+            font-size: 48px;
+            font-weight: 500;
+
+            text-align: center;
+            margin: 20px 0px;
+        }
+        p {
+            max-width: 500px;
+
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+
+            color: $tertiary-color;
+            text-align: center;
+
+            margin-bottom: 50px
+        }
+    }
+    &-form {
+        @include flex-center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+        width: 100%;
+        height: 100%;
+
+        #name, #email, #subject, #message {
+            width: 100%;
+            max-width: 500px;
+
+            padding: 10px 15px;
+
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+
+            outline: 0;
+            border: 1px solid #9292922d;
+        }
+        #message {
+            height: 140px;
+        }
+    }
+    hr {
+        margin-bottom: 20px;
+        margin-inline: auto;
+        opacity: 0.1;
+        width: 90%;
+        border-color: $tertiary-color;
+    }
+}

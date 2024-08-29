@@ -1,7 +1,7 @@
 .main-about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 630px 700px 770px;
+  grid-template-rows: 100vh 700px 1fr;
 }
 @media screen and (max-width: 770px) {
   .main-about {
@@ -83,8 +83,15 @@
   justify-content: center;
   align-items: center;
   padding: 15px;
+  margin-bottom: 50px;
 }
-.main-about-button .button {
+.main-about hr {
+  margin-inline: auto;
+  opacity: 0.1;
+  width: 90%;
+  border-color: #929292;
+}
+.main .button {
   font-size: 15px;
   font-weight: 500;
   border: none;
@@ -94,11 +101,56 @@
   background-color: #E8A48D;
   transition-duration: 0.4s;
 }
-.main-about-button .button:hover {
+.main .button:hover {
   transform: translateY(-2px);
   box-shadow: 0px 3px 10px 0px rgba(34, 34, 34, 0.2666666667);
 }
-.main-about hr {
+
+.main-form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+}
+.main-form-content h2 {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0px;
+}
+.main-form-content p {
+  max-width: 500px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #929292;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+.main-form #name, .main-form #email, .main-form #subject, .main-form #message {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  outline: 0;
+  border: 1px solid rgba(146, 146, 146, 0.1764705882);
+}
+.main-form #message {
+  height: 140px;
+}
+.main hr {
   margin-bottom: 20px;
   margin-inline: auto;
   opacity: 0.1;
@@ -226,7 +278,7 @@
 @media screen and (max-width: 990px) {
   .submenu {
     position: fixed;
-    top: -80px;
+    top: -50px;
     left: 0;
     display: flex;
     flex-direction: row;

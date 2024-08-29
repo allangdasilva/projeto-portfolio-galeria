@@ -13,11 +13,11 @@ $(window).on('load',
 
         //--------Menu----------
         $('#menu').on('click', function () {
-                if ($('#submenu').css('top') == '-80px') {
+                if ($('#submenu').css('top') == '-50px') {
                     $('#submenu').animate({ top: '60px' }, { duration: 700 })
                     $(this).addClass('active')
                 } else {
-                    $('#submenu').animate({ top: '-80px' }, { duration: 700 })
+                    $('#submenu').animate({ top: '-50px' }, { duration: 700 })
                     $(this).removeClass('active')
                 }
             }

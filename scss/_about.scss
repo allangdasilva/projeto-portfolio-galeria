@@ -5,7 +5,7 @@
     &-about {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 630px 700px 770px;
+        grid-template-rows: 100vh 700px 1fr;
 
         // ------------------RESPONSIVE------------------
         @include mobile {
@@ -82,32 +82,31 @@
         &-button {
             @include flex-center;
             padding: 15px;
-
-            .button {
-                font-size: 15px;
-                font-weight: 500;
-
-                border: none;
-                padding: 12px 32px;
-                cursor: pointer;
-
-                color: $bg-color;
-                background-color: $button-color;
-
-                transition-duration: 0.4s;
-
-                &:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0px 3px 10px 0px #22222244;
-                }
-            }
+            margin-bottom: 50px;
         }
         hr {
-            margin-bottom: 20px;
             margin-inline: auto;
             opacity: 0.1;
             width: 90%;
             border-color: $tertiary-color;
+        }
+    }
+    .button {
+        font-size: 15px;
+        font-weight: 500;
+
+        border: none;
+        padding: 12px 32px;
+        cursor: pointer;
+
+        color: $bg-color;
+        background-color: $button-color;
+
+        transition-duration: 0.4s;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 3px 10px 0px #22222244;
         }
     }
 }
