@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
+    <title>Home - Grid Galeria</title>
     <!-- Font -->
     <link href="https://db.onlinewebfonts.com/c/bd6213fa49bedc8cb050c63f14360efa?family=CircularAir-Book"
-        rel="stylesheet">
+    rel="stylesheet">
 
     <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/c0a77e3bb7.js" crossorigin="anonymous"></script>
@@ -259,43 +259,13 @@
         </div>
     </footer>
 
+    <!-- To-Up -->
+    <div id="toUp">
+        <div id="arrow"></div>
+    </div>
+
     <!-- jQuery -->
-    <script>
-        function openImage(valueSrc) {
-            $('.modal-content img').attr('src', valueSrc)
-            $('.modal').css('opacity','1')
-            $('.modal').css('pointer-events','all')
-            $('#close').addClass('active')
-            $('#menu').css('display','none')
-            $('div.image img').delay(50).animate({scale:'1'},{duration:200})
-        }
-        $(document).ready(
-            function () {
-                $('#menu').click(
-                    function () {
-                        if ($('#submenu').css('top') == '-80px') {
-                            $('#submenu').animate({ top: '60px' }, { duration: 700 })
-                            $(this).addClass('active')
-                            $('#header').css('box-shadow', '0px 2px 20px 0px #22222210')
-                        } else {
-                            $('#submenu').animate({ top: '-80px' }, { duration: 700 })
-                            $(this).removeClass('active')
-                            $('#header').css('box-shadow', 'none')
-                        }
-                    }
-                )
-                $('#close').click(
-                    function () {
-                        $('.modal').css('opacity','0')
-                        $('.modal').css('pointer-events','none')
-                        $(this).removeClass('active')
-                        $('#menu').css('display','block')
-                        $('div.image img').animate({scale:'0'},{duration:200})
-                    }
-                )
-            }
-        )
-    </script>
+    <script src="jquery.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,16 @@
+.main-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 630px 700px 770px;
+}
+.main-about-head {
+  background-color: red;
+}
+.main-about-head h2 {
+  font-weight: 400;
+  font-family: "Merriweather", serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -125,6 +138,7 @@
     width: 100%;
     z-index: 1;
     background-color: #fff;
+    box-shadow: inset 0px 2px 10px 0px rgba(34, 34, 34, 0.062745098);
     transition-timing-function: ease-in;
   }
   .submenu-nav {
@@ -388,4 +402,46 @@ header .header-menu-icon.active::before {
   .footer {
     margin-left: 0;
   }
+}
+
+#toUp {
+  position: fixed;
+  right: 40px;
+  bottom: -36px;
+  height: 36px;
+  width: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.103);
+  background-color: #fff;
+  transition: 0.2s;
+}
+@media screen and (max-width: 990px) {
+  #toUp {
+    right: 35px;
+  }
+}
+#toUp #arrow {
+  position: absolute;
+  top: 14px;
+  left: 11.75px;
+}
+#toUp #arrow::after, #toUp #arrow::before {
+  content: "";
+  position: absolute;
+  height: 12.5px;
+  width: 12.5px;
+  transform: rotate(45deg);
+}
+#toUp #arrow::after {
+  top: 5px;
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+#toUp #arrow::before {
+  background-color: #666666;
+  transition: 0.2s;
+}
+#toUp:hover #arrow::before {
+  background-color: #222222;
 }/*# sourceMappingURL=style.css.map */

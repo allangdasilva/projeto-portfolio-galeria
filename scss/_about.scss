@@ -1,0 +1,14 @@
+.main {
+    &-about {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 630px 700px 770px;
+        &-head {
+            background-color: red;
+            h2 {
+                font-weight: 400;
+                font-family: "Merriweather", serif;
+            }
+        }
+    }
+}
