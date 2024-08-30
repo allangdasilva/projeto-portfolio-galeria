@@ -10,6 +10,9 @@ function openImage(valueSrc) {
 
 $(window).on('load',
     function () {
+        //--------Loader----------
+        $('.loader').css('display','none')
+        $('.body').css('display','block')
 
         //--------Menu----------
         $('#menu').on('click', function () {

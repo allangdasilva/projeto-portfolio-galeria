@@ -20,246 +20,251 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 
-<body>   
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-        </div>
-
-        <div class="header-menu-icon" id="menu"><!-- Menu --></div>
-
-        <nav class="header-nav">
-            <ul class="header-nav-ul-about">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">Sobre</a></li>
-                <li><a href="pages/contact.html">Contato</a></li>
-            </ul>
-            <ul class="header-nav-ul-icons">
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Submenu -->
-    <div class="submenu" id="submenu">
-        <nav class="submenu-nav">
-            <ul class="submenu-nav-ul">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">Sobre</a></li>
-                <li><a href="pages/contact.html">Contato</a></li>
-            </ul>
-        </nav>
+<body>
+    <!-- Loading -->
+    <div class="loader">
+        <div class="loader-style"></div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal">
-        <div class="modal-container">
-            <div class="modal-content">
-                <div class="image"><img src="" alt=""></div>
+    <div class="body">
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="header-logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
             </div>
-            <div class="modal-options">
-                <div class="close-icon" id="close"><!-- Close --></div>
+            <div class="header-menu-icon" id="menu"><!-- Menu --></div>
+            <nav class="header-nav">
+                <ul class="header-nav-ul-about">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/about.html">Sobre</a></li>
+                    <li><a href="pages/contact.html">Contato</a></li>
+                </ul>
+                <ul class="header-nav-ul-icons">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Submenu -->
+        <div class="submenu" id="submenu">
+            <nav class="submenu-nav">
+                <ul class="submenu-nav-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/about.html">Sobre</a></li>
+                    <li><a href="pages/contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <div class="image"><img src="" alt=""></div>
+                </div>
+                <div class="modal-options">
+                    <div class="close-icon" id="close"><!-- Close --></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Main -->
-    <div class="main">
-        <section class="main-images">
-            <div class="main-images-01">
-                <img 
-                    loading="lazy"
-                    src="images/violin-01.jpg" 
-                    alt="Foto de um amplificador, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/violin-01.jpg')">
-            </div>
-            <div class="main-images-02">
-                <img 
-                    loading="lazy"
-                    src="images/violin-02.jpg" 
-                    alt="Foto de um violino, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/violin-02.jpg')">
-            </div>
-            <div class="main-images-03">
-                <img 
-                    loading="lazy"
-                    src="images/violin-03.jpg" 
-                    alt="Foto de uma mulher tocando violino, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/violin-03.jpg')">
-            </div>
-            <div class="main-images-04">
-                <img 
-                    loading="lazy"
-                    src="images/violin-04.jpg" 
-                    alt="Foto de um homem tocando violino, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/violin-04.jpg')">
-            </div>
-            <div class="main-images-05">
-                <img 
-                    loading="lazy"
-                    src="images/violin-05.jpg" 
-                    alt="Foto de um led vermelho escrito 'relax', Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/violin-05.jpg')">
-            </div>
-            <div class="main-images-06">
-                <img 
-                    loading="lazy"
-                    src="images/violin-07.jpg" 
-                    alt="Foto de um led escrito 'Open', Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/violin-07.jpg')">
-            </div>
-            <div class="main-images-07">
-                <img 
-                    loading="lazy"
-                    src="images/photograph-03.jpg" 
-                    alt="Foto de duas câmeras fotográficas, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/photograph-03.jpg')">
-            </div>
-            <div class="main-images-08">
-                <img 
-                    loading="lazy"
-                    src="images/photograph-01.jpg" 
-                    alt="Foto de uma câmera fotográfica, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/photograph-01.jpg')">
-            </div>
-            <div class="main-images-09">
-                <img 
-                    loading="lazy"
-                    src="images/photograph-02.jpg" 
-                    alt="Foto de uma câmera polaroid e seu álbum, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/photograph-02.jpg')">
-            </div>
-            <div class="main-images-10">
-                <img 
-                    loading="lazy"
-                    src="images/photograph-04.jpg" 
-                    alt="Foto de uma câmera fotográfica e um livro, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/photograph-04.jpg')">
-            </div>
-            <div class="main-images-11">
-                <img 
-                    loading="lazy"
-                    src="images/photograph-05.jpg" 
-                    alt="Foto de uma coleção de fotos, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/photograph-05.jpg')">
-            </div>
-            <div class="main-images-12">
-                <img 
-                    loading="lazy"
-                    src="images/photograph-06.jpg" 
-                    alt="Foto de uma coleção de fotos, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/photograph-06.jpg')">
-            </div>
-            <div class="main-images-13">
-                <img 
-                    loading="lazy"
-                    src="images/vinyl-02.jpg" 
-                    alt="Foto de uma loja de disco de vinil, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/vinyl-02.jpg')">
-            </div>
-            <div class="main-images-14">
-                <img 
-                    loading="lazy"
-                    src="images/vinyl-01.jpg" 
-                    alt="Foto de uma coleção de disco de vinil, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/vinyl-01.jpg')">
-            </div>
-            <div class="main-images-15">
-                <img 
-                    loading="lazy"
-                    src="images/vinyl-08.jpg" 
-                    alt="Foto de uma mulher com um disco de vinil, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/vinyl-08.jpg')">
-            </div>
-            <div class="main-images-16">
-                <img 
-                    loading="lazy"
-                    src="images/vinyl-04.jpg" 
-                    alt="Foto de uma coleção de disco de vinil, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/vinyl-04.jpg')">
-            </div>
-            <div class="main-images-17">
-                <img 
-                    loading="lazy"
-                    src="images/vinyl-03.jpg" 
-                    alt="Foto de uma coleção de disco de vinil, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/vinyl-03.jpg')">
-            </div>
-            <div class="main-images-18">
-                <img 
-                    loading="lazy"
-                    src="images/vinyl-07.jpg" 
-                    alt="Foto de uma mulher deitada com um disco de vinil, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/vinyl-07.jpg')">
-            </div>
-            <div class="main-images-19">
-                <img 
-                    loading="lazy"
-                    src="images/wedding-02.jpg" 
-                    alt="Foto de duas alianças, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/wedding-02.jpg')">
-            </div>
-            <div class="main-images-20">
-                <img 
-                    loading="lazy"
-                    src="images/wedding-01.jpg" 
-                    alt="Foto de flores de casamento, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/wedding-01.jpg')">
-            </div>
-            <div class="main-images-21">
-                <img 
-                    loading="lazy"
-                    src="images/wedding-03.jpg" 
-                    alt="Foto de casamento, Foto profissional"
-                    height="600px" width="1fr"
-                    onclick="openImage('images/wedding-03.jpg')">
-            </div>
-            <div class="main-images-22">
-                <img 
-                    loading="lazy"
-                    src="images/wedding-04.jpg" 
-                    alt="Foto de casamento, Foto profissional"
-                    height="300px" width="1fr"
-                    onclick="openImage('images/wedding-04.jpg')">
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-copy">
-            <p>&copy; Todos direitos reservados.</p>
+        <!-- Main -->
+        <div class="main">
+            <section class="main-images">
+                <div class="main-images-01">
+                    <img
+                        loading="lazy"
+                        src="images/violin-01.jpg"
+                        alt="Foto de um amplificador, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/violin-01.jpg')">
+                </div>
+                <div class="main-images-02">
+                    <img
+                        loading="lazy"
+                        src="images/violin-02.jpg"
+                        alt="Foto de um violino, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/violin-02.jpg')">
+                </div>
+                <div class="main-images-03">
+                    <img
+                        loading="lazy"
+                        src="images/violin-03.jpg"
+                        alt="Foto de uma mulher tocando violino, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/violin-03.jpg')">
+                </div>
+                <div class="main-images-04">
+                    <img
+                        loading="lazy"
+                        src="images/violin-04.jpg"
+                        alt="Foto de um homem tocando violino, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/violin-04.jpg')">
+                </div>
+                <div class="main-images-05">
+                    <img
+                        loading="lazy"
+                        src="images/violin-05.jpg"
+                        alt="Foto de um led vermelho escrito 'relax', Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/violin-05.jpg')">
+                </div>
+                <div class="main-images-06">
+                    <img
+                        loading="lazy"
+                        src="images/violin-07.jpg"
+                        alt="Foto de um led escrito 'Open', Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/violin-07.jpg')">
+                </div>
+                <div class="main-images-07">
+                    <img
+                        loading="lazy"
+                        src="images/photograph-03.jpg"
+                        alt="Foto de duas câmeras fotográficas, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/photograph-03.jpg')">
+                </div>
+                <div class="main-images-08">
+                    <img
+                        loading="lazy"
+                        src="images/photograph-01.jpg"
+                        alt="Foto de uma câmera fotográfica, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/photograph-01.jpg')">
+                </div>
+                <div class="main-images-09">
+                    <img
+                        loading="lazy"
+                        src="images/photograph-02.jpg"
+                        alt="Foto de uma câmera polaroid e seu álbum, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/photograph-02.jpg')">
+                </div>
+                <div class="main-images-10">
+                    <img
+                        loading="lazy"
+                        src="images/photograph-04.jpg"
+                        alt="Foto de uma câmera fotográfica e um livro, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/photograph-04.jpg')">
+                </div>
+                <div class="main-images-11">
+                    <img
+                        loading="lazy"
+                        src="images/photograph-05.jpg"
+                        alt="Foto de uma coleção de fotos, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/photograph-05.jpg')">
+                </div>
+                <div class="main-images-12">
+                    <img
+                        loading="lazy"
+                        src="images/photograph-06.jpg"
+                        alt="Foto de uma coleção de fotos, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/photograph-06.jpg')">
+                </div>
+                <div class="main-images-13">
+                    <img
+                        loading="lazy"
+                        src="images/vinyl-02.jpg"
+                        alt="Foto de uma loja de disco de vinil, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/vinyl-02.jpg')">
+                </div>
+                <div class="main-images-14">
+                    <img
+                        loading="lazy"
+                        src="images/vinyl-01.jpg"
+                        alt="Foto de uma coleção de disco de vinil, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/vinyl-01.jpg')">
+                </div>
+                <div class="main-images-15">
+                    <img
+                        loading="lazy"
+                        src="images/vinyl-08.jpg"
+                        alt="Foto de uma mulher com um disco de vinil, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/vinyl-08.jpg')">
+                </div>
+                <div class="main-images-16">
+                    <img
+                        loading="lazy"
+                        src="images/vinyl-04.jpg"
+                        alt="Foto de uma coleção de disco de vinil, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/vinyl-04.jpg')">
+                </div>
+                <div class="main-images-17">
+                    <img
+                        loading="lazy"
+                        src="images/vinyl-03.jpg"
+                        alt="Foto de uma coleção de disco de vinil, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/vinyl-03.jpg')">
+                </div>
+                <div class="main-images-18">
+                    <img
+                        loading="lazy"
+                        src="images/vinyl-07.jpg"
+                        alt="Foto de uma mulher deitada com um disco de vinil, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/vinyl-07.jpg')">
+                </div>
+                <div class="main-images-19">
+                    <img
+                        loading="lazy"
+                        src="images/wedding-02.jpg"
+                        alt="Foto de duas alianças, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/wedding-02.jpg')">
+                </div>
+                <div class="main-images-20">
+                    <img
+                        loading="lazy"
+                        src="images/wedding-01.jpg"
+                        alt="Foto de flores de casamento, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/wedding-01.jpg')">
+                </div>
+                <div class="main-images-21">
+                    <img
+                        loading="lazy"
+                        src="images/wedding-03.jpg"
+                        alt="Foto de casamento, Foto profissional"
+                        height="600px" width="1fr"
+                        onclick="openImage('images/wedding-03.jpg')">
+                </div>
+                <div class="main-images-22">
+                    <img
+                        loading="lazy"
+                        src="images/wedding-04.jpg"
+                        alt="Foto de casamento, Foto profissional"
+                        height="300px" width="1fr"
+                        onclick="openImage('images/wedding-04.jpg')">
+                </div>
+            </section>
         </div>
-    </footer>
 
-    <!-- To-Up -->
-    <div id="toUp">
-        <div id="arrow"></div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-copy">
+                <p>&copy; Todos direitos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- To-Up -->
+        <div id="toUp">
+            <div id="arrow"></div>
+        </div>
     </div>
 
     <!-- jQuery -->
