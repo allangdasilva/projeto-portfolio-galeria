@@ -20,7 +20,8 @@
     justify-content: center;
 
     min-height: 100vh;
-
+    background-color: $bg-color;
+    
     img {
         position: absolute;
         width: 80px;
@@ -189,7 +190,7 @@ header .header-menu-icon.active{
 
 
 // ------------------Close-active------------------
-.modal .modal-box-options .close-icon.active{
+.modal .modal-box-content .close-icon.active{
     &::after{
         transform: rotate(135deg);
         bottom: 9px;
@@ -216,47 +217,22 @@ header .header-menu-icon.active{
     pointer-events: none;
     
     transition-duration: 0.2s;
-
+    
     &-box{
         display: grid;
-        grid-template-columns: 50px 1fr 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90% 10%;
 
-        max-width: 1280px;
-        margin-inline: auto;
-
-        //-----------------RESPONSIVE------------------
-        @include tablet {
-            display: flex;
-            flex-direction: column-reverse;
-            height: 100%;
-        }
-
-        &-number {
-            @include flex-center;
-
-            //-----------------RESPONSIVE------------------
-            @include tablet {
-                height: 5%;
-            }
-
-            span {
-                font-size: 14px
-            }
-        }
+        height: 100%;
+        width: 100%;
 
         &-content {
+            position: relative;
             @include flex-center;
             gap: 5px;
-            
-            height: 100vh;
-            width: 100%;
-    
+            margin: 0 auto;
+
             padding: 10px;
-    
-            //-----------------RESPONSIVE------------------
-            @include tablet {
-                height: 90%;
-            }
 
             i {
                 font-size: 25px;
@@ -271,33 +247,14 @@ header .header-menu-icon.active{
                     object-fit: contain;
                 }
             }
-        }
-        &-options {
-            position: relative;
-            @include flex-column;
-    
-            height: 100vh;
-            width: 100%;
-    
-            padding-block: 20px;
-            //-----------------RESPONSIVE------------------
-            @include tablet {
-                height: 5%;
-                padding-block: 0px;
-            }
-    
             .close-icon {
                 @include menu-icon;
                 border-top: 2px solid transparent;
-                top: 25px;
-                right: 2.5px;
+
+                top: 100%;
+                right: 10px;
+
                 transition-duration: 0.1s;
-    
-                //-----------------RESPONSIVE------------------
-                @include tablet {
-                    top: 21px;
-                    right: 20px;
-                }
     
                 &::after {
                     transform: rotate(0deg);
@@ -307,6 +264,19 @@ header .header-menu-icon.active{
                     transform: rotate(0deg);
                     bottom: 0px
                 }
+            }
+        }
+
+        &-options {
+            @include flex-center;
+            gap: 10px;
+
+            padding-block: 10px;
+
+            i {
+                cursor: pointer;
+                font-size: 25px;
+                padding-inline: 10px;
             }
         }
     }

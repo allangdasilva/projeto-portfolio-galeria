@@ -171,6 +171,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: #fff;
 }
 .loader img {
   position: absolute;
@@ -345,11 +346,11 @@ header .header-menu-icon.active::before {
   bottom: 1px;
 }
 
-.modal .modal-box-options .close-icon.active::after {
+.modal .modal-box-content .close-icon.active::after {
   transform: rotate(135deg);
   bottom: 9px;
 }
-.modal .modal-box-options .close-icon.active::before {
+.modal .modal-box-content .close-icon.active::before {
   transform: rotate(-135deg);
   bottom: 1px;
 }
@@ -368,43 +369,19 @@ header .header-menu-icon.active::before {
 }
 .modal-box {
   display: grid;
-  grid-template-columns: 50px 1fr 30px;
-  max-width: 1280px;
-  margin-inline: auto;
-}
-@media screen and (max-width: 990px) {
-  .modal-box {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 100%;
-  }
-}
-.modal-box-number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (max-width: 990px) {
-  .modal-box-number {
-    height: 5%;
-  }
-}
-.modal-box-number span {
-  font-size: 14px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90% 10%;
+  height: 100%;
+  width: 100%;
 }
 .modal-box-content {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  height: 100vh;
-  width: 100%;
+  margin: 0 auto;
   padding: 10px;
-}
-@media screen and (max-width: 990px) {
-  .modal-box-content {
-    height: 90%;
-  }
 }
 .modal-box-content i {
   font-size: 25px;
@@ -419,21 +396,7 @@ header .header-menu-icon.active::before {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.modal-box-options {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  padding-block: 20px;
-}
-@media screen and (max-width: 990px) {
-  .modal-box-options {
-    height: 5%;
-    padding-block: 0px;
-  }
-}
-.modal-box-options .close-icon {
+.modal-box-content .close-icon {
   position: absolute;
   right: 20px;
   display: block;
@@ -445,11 +408,11 @@ header .header-menu-icon.active::before {
   z-index: 100;
   transition-duration: 0.3s;
   border-top: 2px solid transparent;
-  top: 25px;
-  right: 2.5px;
+  top: 100%;
+  right: 10px;
   transition-duration: 0.1s;
 }
-.modal-box-options .close-icon::after, .modal-box-options .close-icon::before {
+.modal-box-content .close-icon::after, .modal-box-content .close-icon::before {
   content: "";
   position: relative;
   display: block;
@@ -459,19 +422,25 @@ header .header-menu-icon.active::before {
   background-color: #222222;
   transition-duration: 0.4s;
 }
-@media screen and (max-width: 990px) {
-  .modal-box-options .close-icon {
-    top: 21px;
-    right: 20px;
-  }
-}
-.modal-box-options .close-icon::after {
+.modal-box-content .close-icon::after {
   transform: rotate(0deg);
   bottom: 0px;
 }
-.modal-box-options .close-icon::before {
+.modal-box-content .close-icon::before {
   transform: rotate(0deg);
   bottom: 0px;
+}
+.modal-box-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px;
+}
+.modal-box-options i {
+  cursor: pointer;
+  font-size: 25px;
+  padding-inline: 10px;
 }
 
 .main {

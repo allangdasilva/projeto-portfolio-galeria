@@ -4,7 +4,7 @@ function openImage(valueSrc) {
     $('.modal').css('opacity','1')
     $('.modal').css('pointer-events','all')
     $('#close').addClass('active')
-    $('#menu').css('display','none')
+    $('#toUp').css('display','none')
     $('.image img').delay(50).animate({scale:'1'},{duration:200})
 }
 
@@ -31,7 +31,7 @@ $(window).on('load',
                 $('.modal').css('opacity','0')
                 $('.modal').css('pointer-events','none')
                 $(this).removeClass('active')
-                $('#menu').css('display','block')
+                $('#toUp').css('display','block')
                 $('.image img').animate({scale:'0'},{duration:200})
             }
         )
