@@ -1,6 +1,6 @@
 //--------Open-Modal----------
 function openImage(valueSrc) {
-    $('.modal-content img').attr('src', valueSrc)
+    $('.modal-box-content img').attr('src', valueSrc)
     $('.modal').css('opacity','1')
     $('.modal').css('pointer-events','all')
     $('#close').addClass('active')
