@@ -1,15 +1,6 @@
-//--------Open-Modal----------
-function openImage(valueSrc) {
-    $('.modal-box-content img').attr('src', valueSrc)
-    $('.modal').css('opacity','1')
-    $('.modal').css('pointer-events','all')
-    $('#close').addClass('active')
-    $('#toUp').css('display','none')
-    $('.image img').delay(50).animate({scale:'1'},{duration:200})
-}
-
 $(window).on('load',
     function () {
+        
         //--------Loader----------
         $('.loader').css('display','none')
         $('.body').css('display','block')
@@ -23,16 +14,6 @@ $(window).on('load',
                     $('#submenu').animate({ top: '-50px' }, { duration: 500 })
                     $(this).removeClass('active')
                 }
-            }
-        )
-
-        //--------Close-Modal----------
-        $('#close').on('click', function () {
-                $('.modal').css('opacity','0')
-                $('.modal').css('pointer-events','none')
-                $(this).removeClass('active')
-                $('#toUp').css('display','block')
-                $('.image img').animate({scale:'0'},{duration:200})
             }
         )
 

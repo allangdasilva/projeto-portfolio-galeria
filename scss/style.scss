@@ -189,102 +189,6 @@ header .header-menu-icon.active{
 }
 
 
-// ------------------Close-active------------------
-.modal .modal-box-content .close-icon.active{
-    &::after{
-        transform: rotate(135deg);
-        bottom: 9px;
-    }
-    &::before{
-        transform: rotate(-135deg);
-        bottom: 1px;
-    }
-}
-
-
-// ------------------Modal------------------
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    height: 100%;
-    width: 100%;
-
-    background-color: #ffffff80;
-    z-index: 999;
-    opacity: 0;
-    pointer-events: none;
-    
-    transition-duration: 0.2s;
-    
-    &-box{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 90% 10%;
-
-        height: 100%;
-        width: 100%;
-
-        &-content {
-            position: relative;
-            @include flex-center;
-            gap: 5px;
-            margin: 0 auto;
-
-            padding: 10px;
-
-            i {
-                font-size: 25px;
-            }
-            .image {
-                height: 100%;
-                overflow: hidden;
-    
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: contain;
-                }
-            }
-            .close-icon {
-                @include menu-icon;
-                border-top: 2px solid transparent;
-
-                top: 100%;
-                right: 10px;
-
-                transition-duration: 0.1s;
-    
-                &::after {
-                    transform: rotate(0deg);
-                    bottom: 0px;
-                }
-                &::before{
-                    transform: rotate(0deg);
-                    bottom: 0px
-                }
-            }
-        }
-
-        &-options {
-            @include flex-center;
-            gap: 10px;
-
-            padding-block: 10px;
-
-            i {
-                cursor: pointer;
-                font-size: 25px;
-                padding-inline: 10px;
-            }
-        }
-    }
-    
-    
-}
-
-
 // ------------------Main------------------
 .main {
     margin-left: $header-width;
@@ -313,6 +217,7 @@ header .header-menu-icon.active{
         ;
         gap: 30px;
         padding: 15px;
+
         div {
             overflow: hidden;
         }
