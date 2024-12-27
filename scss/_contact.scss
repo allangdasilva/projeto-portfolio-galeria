@@ -54,10 +54,6 @@
         }
     }
     hr {
-        margin-bottom: 20px;
-        margin-inline: auto;
-        opacity: 0.1;
-        width: 90%;
-        border-color: $tertiary-color;
+        @include hr-style;
     }
 }

@@ -2,24 +2,22 @@
 
 
 @mixin menu-responsive {
-    position: fixed;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
 
-    height: 60px;
-    min-height: 60px;
-    width: 100vw;
+    height: initial;
+    min-height: initial;
+    width: 100%;
 
-    padding: 0 20px 0 20px;
+    padding: 0;
     margin-inline: auto;
 
     z-index: 99;
-    box-shadow: none;
+    box-shadow: $box-shadow-bottom;
 
-    background-color: $bg-color;
+    background-color: red;
 
     transition: box-shadow 0.3s;
 }
@@ -52,6 +50,12 @@
 
         transition-duration: 0.4s;
     }
+}
+@mixin hr-style {
+    width: 90%;
+    margin-inline: auto;
+    opacity: 0.1;
+    border-top: 1px solid $border-color;
 }
 @mixin flex-center {
     display: flex;

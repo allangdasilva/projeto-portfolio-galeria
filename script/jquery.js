@@ -7,13 +7,8 @@ $(window).on('load',
 
         //--------Menu----------
         $('#menu').on('click', function () {
-                if ($('#submenu').css('top') == '-50px') {
-                    $('#submenu').animate({ top: '60px' }, { duration: 500 })
-                    $(this).addClass('active')
-                } else {
-                    $('#submenu').animate({ top: '-50px' }, { duration: 500 })
-                    $(this).removeClass('active')
-                }
+                $('.header-nav').toggleClass('header-nav-active')
+                $('#menu').toggleClass('header-menu-icon-active')
             }
         )
 
